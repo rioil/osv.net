@@ -1,4 +1,4 @@
-﻿namespace OSV.Schema;
+namespace OSV.Schema;
 
 /// <summary>
 /// Package information and version.
@@ -15,12 +15,12 @@ public sealed record Package
     public string Name { get; set; } = null!;
 
     /// <summary>
-    /// Required.
+    /// Optional in request. Required in response.
     /// The ecosystem for this package.
     /// For the complete list of valid ecosystem names, see https://ossf.github.io/osv-schema/#affectedpackage-field.
     /// </summary>
     [JsonPropertyName("ecosystem")]
-    public Ecosystem Ecosystem { get; set; }
+    public Ecosystem? Ecosystem { get; set; }
 
     /// <summary>
     /// Optional.
